@@ -7,7 +7,8 @@
     "scripts": {
       "start": "node src/server.js",
       "dev": "node --watch src/server.js",
-      "test": "node --test --test-force-exit",
+      "test": "node --test --test-force-exit src/qrService.test.js src/server.test.js",
+      "test:integration": "node --test --test-force-exit src/integration.test.js",
       "clean": "node -e \"require('fs').rmdirSync('qr-codes/', { recursive: true }); process.exit(0);\"",
       "pdf": "node src/pdfGenerator.js"
     },

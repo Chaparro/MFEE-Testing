@@ -18,9 +18,14 @@ npm install
 
 ## Usage
 
-### Run All Test with Node Test Runner
+### Run Tests with Node Test Runner
 ```bash
 npm run test
+```
+
+### Run Integration Test
+```bash
+npm run test:integration
 ```
 
 ### Clean Output Folder
@@ -65,16 +70,6 @@ Generates multiple QR codes with batch numbering.
 }
 ```
 
-### GET /health
-Health check endpoint.
-
-**Response:**
-```json
-{
-  "status": "OK",
-  "timestamp": "2024-01-01T12:00:00.000Z"
-}
-```
 
 ## File Structure
 
