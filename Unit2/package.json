@@ -1,0 +1,19 @@
+{
+    "name": "qr-generator-api-test",
+    "version": "1.0.0",
+    "description": "Simple Express API for QR code generation, implementing Node Test Runner",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+      "start": "node server.js",
+      "dev": "node --watch server.js",
+      "test": "node --test --test-force-exit"
+    },
+    "dependencies": {
+      "express": "^5.1.0",
+      "qrcode": "^1.5.4"
+    },
+    "devDependencies": {
+      "supertest": "^7.1.1"
+    }
+  }
