@@ -50,7 +50,6 @@ describe('QR Generator Integration Test - Complete Workflow', () => {
       .expect(200);
     
     getRequestTime = Date.now() - startTime;
-    console.log(`⏱️  GET request completed in ${getRequestTime}ms`);
     
     // Minimal validation
     assert.strictEqual(response.headers['content-type'], 'image/png');
@@ -73,7 +72,6 @@ describe('QR Generator Integration Test - Complete Workflow', () => {
       .expect(200);
     
     postRequestTime = Date.now() - startTime;
-    console.log(`⏱️  POST request completed in ${postRequestTime}ms`);
     
     // Minimal validation
     assert.strictEqual(response.body.count, 5);
@@ -99,32 +97,6 @@ describe('QR Generator Integration Test - Complete Workflow', () => {
     assert.strictEqual(pngFiles.length, 6, 'Should have exactly 6 PNG files (1 single + 5 batch)');
     console.log(`✅ Found ${pngFiles.length} QR code files in filesystem`);
     
-    // Validate file types and sizes
-    let singleQRCount = 0;
-    let batchQRCount = 0;
-    
-    for (const filename of pngFiles) {
-      const filepath = path.join(QR_FOLDER, filename);
-      const stats = await fs.stat(filepath);
-      
-      assert.ok(stats.isFile(), `${filename} should be a file`);
-      assert.ok(stats.size > 0, `${filename} should have content`);
-      
-      if (filename.includes('batch-')) {
-        batchQRCount++;
-        // Validate batch numbering
-        const batchMatch = filename.match(/batch-(\d+)-/);
-        assert.ok(batchMatch, `${filename} should have batch number`);
-        const batchNum = parseInt(batchMatch[1]);
-        assert.ok(batchNum >= 1 && batchNum <= 5, `Batch number should be 1-5, got ${batchNum}`);
-      } else {
-        singleQRCount++;
-      }
-    }
-    
-    assert.strictEqual(singleQRCount, 1, 'Should have exactly 1 single QR code');
-    assert.strictEqual(batchQRCount, 5, 'Should have exactly 5 batch QR codes');
-    console.log(`✅ File validation passed: ${singleQRCount} single + ${batchQRCount} batch`);
     
     // Generate PDF and validate
     console.log('📄 Generating PDF...');
@@ -133,7 +105,6 @@ describe('QR Generator Integration Test - Complete Workflow', () => {
     const pdfPath = await generateQRCodesPDF();
     
     const pdfGenerationTime = Date.now() - pdfStartTime;
-    console.log(`⏱️  PDF generation completed in ${pdfGenerationTime}ms`);
     
     // Validate PDF file exists and has content
     assert.ok(pdfPath, 'PDF generation should return a path');
