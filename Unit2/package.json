@@ -2,13 +2,14 @@
     "name": "qr-generator-api-test",
     "version": "1.0.0",
     "description": "Simple Express API for QR code generation, implementing Node Test Runner",
-    "main": "server.js",
+    "main": "src/server.js",
     "type": "module",
     "scripts": {
-      "start": "node server.js",
-      "dev": "node --watch server.js",
+      "start": "node src/server.js",
+      "dev": "node --watch src/server.js",
       "test": "node --test --test-force-exit",
-      "generate-pdf": "node pdfGenerator.js"
+      "clean": "node -e \"require('fs').rmdirSync('qr-codes/', { recursive: true }); process.exit(0);\"",
+      "generate-pdf": "node src/pdfGenerator.js"
     },
     "dependencies": {
       "express": "^5.1.0",
