@@ -9,7 +9,7 @@
       "dev": "node --watch src/server.js",
       "test": "node --test --test-force-exit",
       "clean": "node -e \"require('fs').rmdirSync('qr-codes/', { recursive: true }); process.exit(0);\"",
-      "generate-pdf": "node src/pdfGenerator.js"
+      "pdf": "node src/pdfGenerator.js"
     },
     "dependencies": {
       "express": "^5.1.0",

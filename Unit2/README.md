@@ -1,13 +1,14 @@
 # QR Generator API
 
 A simple Express.js API for generating QR codes with timestamp data.
+Meant to be tested with Node Test Runner.
 
 ## Features
 
 - **GET /qr** - Generate single QR code with current timestamp
 - **POST /qr/batch** - Generate batch of QR codes (1-100)
 - All QR codes are saved as PNG files to the filesystem
-- Clean, testable architecture following SOLID principles
+- PDF generation utility
 
 ## Installation
 
@@ -17,19 +18,19 @@ npm install
 
 ## Usage
 
-### Development
+### Run All Test with Node Test Runner
 ```bash
-npm run dev
+npm run test
 ```
 
-### Production
+### Clean Output Folder
 ```bash
-npm start
+npm run clean
 ```
 
-### Testing
+### Generate PDF Output
 ```bash
-npm test
+npm run pdf
 ```
 
 ## API Endpoints
@@ -78,6 +79,7 @@ Health check endpoint.
 ## File Structure
 
 ```
+src
 ├── server.js          # Express app and routes
 ├── qrService.js       # QR generation logic
 ├── server.test.js     # Test suite
@@ -95,4 +97,5 @@ Health check endpoint.
 
 - `express` - Web framework
 - `qrcode` - QR code generation
+- `pdfkit` - PDF utilities
 - `supertest` - HTTP testing (dev dependency)
