@@ -3,3 +3,6 @@ package-lock.json
 
 qr-codes/*
 pdf-output/*
+
+appmap.yml
+tmp/
