@@ -1,4 +1,4 @@
-# Unit1
+# MFEE Intermediate - Automation/Testing
 
 The Intermediate MFEE Testing/Automation course is aimed at developers looking to expand their skills in a variety of domains.
 
