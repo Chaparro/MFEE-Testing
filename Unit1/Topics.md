@@ -1,38 +1,3 @@
-# MFEE Intermediate Testing Topics
-## A Quick Refresher
-
-| Type | Description | Example |
-|---|---|---|
-| unit | the smallest bit of code you can isolate | `const sum = (a, b) => a + b` |
-| component | a unit + dependencies | `const arithmetic = (op = sum, a, b) => ops[op](a, b)` | 
-| integration | components fitting together | - | 
-| end-to-end (e2e) | app + external data stores, delivery, etc | A fake user (ex a Webdriverio agent) literally using an app connected to real external systems. |
-
----
-
-# What’s a Test Runner?
-
-A test runner is a tool that automates the process of executing tests in the development of software, ensuring that code changes do not break existing functionality.
-
-It allows developers to run tests across different environments and conditions systematically.
-
-Test runners can be part of a larger **test framework** or standalone tools.
-
----
-
-# Usual features of a Test Runner
-
-<div class="dense">
-
-- **Test Discovery:** Automatically detecting and running all test cases within specified directories or files.
-- **Test Organization:** Allowing tests to be grouped, categorized, or tagged for selective execution.
-- **Result Reporting:** Providing detailed reports on test outcomes, including successes, failures, and exceptions.
-- **Integration Support:** Offering compatibility with Continuous Integration (CI) systems for automated testing within development pipelines.
-
-</div>
-
----
-
 # Node.js Test Runner: A Modern Testing Solution for Developers
 
 ## What is Node.js Test Runner?
