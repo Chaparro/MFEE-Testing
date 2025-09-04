@@ -3,6 +3,8 @@ package-lock.json
 
 qr-codes/*
 pdf-output/*
+Unit2/qr-codes/*
+Unit2/pdf-output/*
 
 appmap.yml
 tmp/

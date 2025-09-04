@@ -4,7 +4,9 @@
 
 An example was prepared, with a simple express API + additional utilities. The goal is to showcase the ease of use and benefits of of Node Test Runner.
 
-We can see the project's original README describing features, installation and usage, and another document detailing a list of activities for us to follow with the repository.
+We can see the project's original README (unit2.md) describing features, installation and usage, and another document (activity.md) detailing a list of activities for us to follow with the repository.
+
+Below is a quick summary of the project's main features and tests.
 
 ## What it does
 
